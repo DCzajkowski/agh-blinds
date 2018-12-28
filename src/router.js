@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Blinds from './views/Blinds.vue'
+import Remote from './views/Remote.vue'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/blinds',
       name: 'Blinds',
       component: Blinds,
+    },
+    {
+      path: '/remote',
+      name: 'Remote',
+      component: Remote,
     },
     // {
     //   path: '/about',
