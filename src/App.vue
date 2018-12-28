@@ -1,8 +1,5 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      //
-    </div>
+  <div id="app" class="bg-black min-h-screen">
     <router-view/>
   </div>
 </template>

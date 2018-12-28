@@ -4,3 +4,25 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.transition-slowest {
+  transition: all 2.5s;
+}
+
+.after\:flex-auto {
+  flex-flow: row wrap;
+  /* justify-content: space-between; */
+}
+
+.after\:flex-auto::after {
+  content: "";
+  flex: auto;
+}
+
+.top-3 {
+  top: .75rem;
+}
+
+.left-3 {
+  left: .75rem;
+}
