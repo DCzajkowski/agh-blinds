@@ -1,8 +1,8 @@
 <template>
-  <div class="">
-    <form :action="blindsRoute" method="post" @submit.prevent="submit">
-      <input type="text" v-model="n">
-      <button type="submit">Create</button>
+  <div class="flex justify-center items-center h-screen">
+    <form :action="blindsRoute" method="post" @submit.prevent="submit" class="flex flex-col">
+      <input type="text" v-model="n" class="bg-grey-dark rounded-full py-4 px-6 text-md outline-none focus:shadow-outline">
+      <button class="bg-green-dark mt-4 rounded-full py-4 px-6 text-md focus:outline-none focus:shadow-outline" type="submit">Create {{ n }} blinds</button>
     </form>
   </div>
 </template>
