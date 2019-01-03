@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    n: 0,
+    n: 1,
   },
   mutations: {
     n: (state, value) => state.n = Number(value),

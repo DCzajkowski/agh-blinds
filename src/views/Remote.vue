@@ -2,28 +2,16 @@
   <div class="p-8 max-w-3xl mx-auto">
     <div class="flex justify-between mt-32 w-full">
       <div v-for="(blind, index) in blinds" :key="`panel-${index}`" class="flex flex-col">
-        <button class="flex items-center justify-center focus:outline-none focus:shadow-outline pointer w-16 h-16 rounded-full bg-grey-darkest" @click="up(index + 1)">
-          <svg class="text-grey-dark w-16 h-16 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-        </button>
-        <button class="flex items-center justify-center focus:outline-none focus:shadow-outline pointer w-16 h-16 rounded-full bg-grey-darkest mt-4" @click="down(index + 1)">
-          <svg class="text-grey-dark w-16 h-16 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg>
-        </button>
-        <button class="flex items-center justify-center focus:outline-none focus:shadow-outline pointer w-16 h-16 rounded-full bg-grey-darkest mt-4" @click="stop(index + 1)">
-          <svg class="text-grey-dark w-12 h-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-        </button>
+        <up-button @click="up(index + 1)"></up-button>
+        <down-button class="mt-4" @click="down(index + 1)"></down-button>
+        <stop-button class="mt-4" @click="stop(index + 1)"></stop-button>
         <span class="mt-4 text-3xl text-grey flex justify-center">{{ index + 1 }}</span>
       </div>
 
       <div class="flex flex-col">
-        <button class="flex items-center justify-center focus:outline-none focus:shadow-outline pointer w-16 h-16 rounded-full bg-grey-darkest" @click="up('all')">
-          <svg class="text-grey-dark w-16 h-16 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-        </button>
-        <button class="flex items-center justify-center focus:outline-none focus:shadow-outline pointer w-16 h-16 rounded-full bg-grey-darkest mt-4" @click="down('all')">
-          <svg class="text-grey-dark w-16 h-16 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg>
-        </button>
-        <button class="flex items-center justify-center focus:outline-none focus:shadow-outline pointer w-16 h-16 rounded-full bg-grey-darkest mt-4" @click="stop('all')">
-          <svg class="text-grey-dark w-12 h-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-        </button>
+        <up-button @click="up('all')"></up-button>
+        <down-button class="mt-4" @click="down('all')"></down-button>
+        <stop-button class="mt-4" @click="stop('all')"></stop-button>
         <span class="mt-4 text-3xl text-grey flex justify-center">All</span>
       </div>
     </div>
